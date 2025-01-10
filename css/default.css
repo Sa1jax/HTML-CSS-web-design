@@ -1,0 +1,104 @@
+/* Font import */
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700&family=Lexend:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oxanium:wght@200..800&family=Poppins:wght@200;400;500;600;700&family=Quicksand:wght@300..700&family=Roboto+Condensed:wght@500&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+:root {
+    --ff: 'Lexend', sans-serif;
+    
+    --fs-regular: clamp(0.8rem, 2.5vw, 1rem);
+    --fs-light: 0.8rem;
+    --fs-medium: 1.125rem;
+    --fs-large: 1.5rem;
+    --fs-h1: clamp(1.6rem, 6vw ,2.9rem);
+
+    --fw-regular: 400;
+    --fw-light: 300;
+    --fw-medium: 500;
+    --fw-large: 600;
+    --fw-h1: 800;
+
+    --clr-font-regular: black;
+    --clr-primary: #f0f0f0;
+    --clr-secondary: rgb(160, 70, 160);
+    --clr-accent: rgb(240, 195, 200);
+    --clr-nav-border: #D3D3D3;
+    --clr-nav-hov: linear-gradient(to right,
+        rgb(87, 0, 109) 20%,
+        rgb(129, 14, 160) 60%,
+        rgb(190, 45, 230) 100%   
+    );
+    --clr-nav-hov-2: rgb(125, 0, 160);
+    --clr-h1: linear-gradient(90deg, 
+        rgb(67, 1, 85) 10%,
+        rgba(105,0,181,1) 50%,
+        rgba(146,43,220,1) 100%
+    );
+
+    --btn-br: 2rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--ff); 
+    font-size: var(--fs-regular);
+    font-weight: var(--fw-regular);
+    color: var(--clr-font-regular);
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    background-color: var(--clr-primary);
+    overflow: hidden;
+}
+
+/* 
+// --- NAVBAR ---
+*/
+nav {
+    max-width: 100%;
+    height: max(10vh, 50px);
+    background-color: var(--clr-primary);
+    border-bottom: 2px solid var(--clr-nav-border);
+    animation: navbarSlide 800ms ease-out forwards;
+    animation-delay: 100ms;
+    transform-origin: top;
+}
+
+nav .menu {
+    max-width: inherit;
+    height: inherit;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(0.5rem, 3vw, 1.6rem);
+}
+nav .menu a {
+    text-decoration: none;
+    color: var(--clr-font-regular);
+    font-size: var(--fs-medium);
+    position: relative;
+}
+nav .menu a::after {
+    content: '';
+    height: 4px;
+    width: 100%;
+    background: var(--clr-nav-hov);
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    scale: 0 1;
+    transition: scale 300ms ease-in-out;
+    transform-origin: left;
+}
+nav .menu a:hover::after {
+    scale: 1 1;
+}
+nav .menu a:hover {
+    color: var(--clr-nav-hov-2);
+}

@@ -1,0 +1,140 @@
+@import url("default.css");
+
+/*
+// --- MAIN ---
+*/
+main {
+    height: 90vh;
+    height: 90dvh;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    opacity: 0;
+    transform: translateY(-60px);
+    margin-bottom: 1rem;
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-h1);
+    animation: fadeIn 800ms ease-out forwards;
+}
+
+.wrapper {
+    margin-block: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: clamp(300px, 70%, 1000px);
+}
+
+.wrapper--cards {
+    display: flex;
+    gap: clamp(0.5rem, 1.8vw, 1.8rem);
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.card {
+    min-width: 150px;
+    height: max(45vh, 250px);
+    flex: 1;
+    background: darkgrey;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    transition: 
+        scale 300ms ease-in-out,
+        box-shadow 300ms;
+}
+.card--1 {
+    opacity: 0;
+    transform: translateY(-60px);
+    background-color: var(--clr-accent);
+    animation: fadeIn 800ms ease-out forwards;
+    animation-delay: 200ms;
+}
+.card--2 {
+    opacity: 0;
+    transform: translateY(-60px);
+    background-color: var(--clr-secondary);
+    animation: fadeIn 800ms ease-out forwards;
+    animation-delay: 400ms;
+}
+.card--3 {
+    opacity: 0;
+    transform: translateY(-60px);
+    background-color: var(--clr-accent);
+    animation: fadeIn 800ms ease-out forwards;
+    animation-delay: 600ms;
+}
+
+.card--1:hover,
+.card--2:hover,
+.card--3:hover {
+    scale: 1.1;
+    box-shadow: 0 1rem 1rem rgb(0, 0, 0, 0.2);
+}
+
+h3 {
+    margin-top: 2rem;
+    margin-bottom: min(1.2vw, 2rem);
+    font-size: var(--fs-large);
+    font-weight: var(--fw-medium);
+}
+
+p {
+    padding-inline: 0.5rem;
+    font-size: var(--fs-light);
+    font-weight: var(--fw-regular);
+}
+
+@media (max-width: 700px) {
+    body {
+        overflow: auto;
+    }
+
+    main {
+        height: 800px;
+    }
+
+    .wrapper--cards {
+        height: 600px;
+        flex-direction: column;
+    }
+    .card--1 {
+        opacity: 0;
+        transform: translateY(0);
+        transform: translateX(120px);
+        animation: phoneSlideIn 800ms ease-out forwards;
+        animation-delay: 400ms;
+    }
+    .card--2 {
+        opacity: 0;
+        transform: translateY(0);
+        transform: translateX(120px);
+        animation: phoneSlideIn 800ms ease-out forwards;
+        animation-delay: 600ms;
+    }
+    .card--3 {
+        opacity: 0;
+        transform: translateY(0);
+        transform: translateX(120px);
+        animation: phoneSlideIn 800ms ease-out forwards;
+        animation-delay: 800ms;
+    }
+
+    @keyframes phoneSlideIn {
+        to { opacity: 1; transform: translateX(0); }
+    }
+}
+
+/*
+// --- ANIMACE ---
+*/
+@keyframes fadeIn {
+    to { opacity: 1; transform: translateY(0); }
+}

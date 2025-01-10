@@ -1,0 +1,210 @@
+@import url("default.css");
+
+/*
+// --- MAIN ---
+*/
+main {
+    height: 90vh;
+    height: 90dvh;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: max(40%, 600px);
+    margin-inline: 0.25rem;
+    margin-block: 5rem;
+}
+
+h1 {
+    opacity: 0; 
+    transform: translateX(120px);
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-h1);
+    line-height: calc(1.2rem + 3vw);
+    animation: textAnimation 800ms cubic-bezier(.13,.01,.21,2.02) forwards;
+    animation-delay: 500ms;
+    cursor: default;
+}
+#h1 {
+    opacity: 0; 
+    transform: translateX(120px);
+    animation: textAnimation 800ms cubic-bezier(.13,.01,.21,2.02) forwards;
+    color: transparent;
+    background: var(--clr-h1);
+    background-clip: text;
+    animation-delay: 500ms;
+    cursor: default;
+    align-self: center;
+}
+
+p {
+    font-size: var(--fs-regular);
+    font-weight: var(--fw-regular);
+    opacity: 0; 
+    padding-top: 1rem;
+    transform: translateX(120px);
+    text-align: center;
+    padding-inline: 1rem;
+    line-height: 1.4rem;
+    animation: textAnimation 1000ms cubic-bezier(.13,.01,.21,2.02) forwards;
+    animation-delay: 550ms;
+    cursor: default;
+}
+
+.button {
+    opacity: 0;
+    transform: translateY(160px);
+    margin-top: 4rem;
+    width: 16rem;
+    height: 4rem;
+    border-radius: var(--btn-br);
+    background-color: var(--clr-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: scale 400ms ease;
+    animation: buttonFadeIn 700ms ease-out forwards;
+    animation-delay: 500ms;
+}
+.button a {
+    background: transparent;
+    padding: 0.8rem 1.8rem;
+    text-decoration: none;
+    color: var(--clr-primary);
+    font-size: var(--fs-medium);
+    font-weight: var(--fw-large);
+}
+.button:hover {
+    scale: 1.1;
+}
+
+
+/* -> Media query 800px => odstranit */
+.shape {
+    height: 60px;
+    background-color: var(--clr-secondary);
+}
+.shape--1 {
+    transform: translateX(-260px);
+    width: min(15%, 240px);
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    z-index: 10;
+    animation: slideInLeft 500ms ease-out forwards;
+    animation-delay: 1100ms;
+}
+.shape--2 {
+    transform: translateX(-260px);
+    width: min(12%, 200px);
+    position: absolute;
+    top: calc(10vh + 50px);
+    left: 0;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    background-color: var(--clr-accent);
+    z-index: 1;
+    animation: slideInLeft 500ms ease-out forwards;
+    animation-delay: 1100ms;
+}
+.shape--3 {
+    transform: translateX(-260px);
+    width: min(8%, 160px);
+    position: absolute;
+    top: calc(10vh + 100px);
+    left: 0;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    z-index: -1;
+    animation: slideInLeft 500ms ease-out forwards;
+    animation-delay: 1100ms;
+}
+.shape--4 {
+    transform: translateX(+260px);
+    width: min(15%, 240px);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    z-index: 10;
+    animation: slideInRight 500ms ease-out forwards;
+    animation-delay: 1100ms;
+}
+.shape--5 {
+    transform: translateX(+260px);
+    width: min(12%, 200px);
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    background-color: var(--clr-accent);
+    z-index: 1;
+    animation: slideInRight 500ms ease-out forwards;
+    animation-delay: 1100ms;
+}
+
+@media (max-width: 800px) {
+    .shape {
+        display: none;
+    }
+
+    h1,
+    #h1 {
+        transform: translateY(-60px);
+        animation: phoneFadeIn 800ms ease-out forwards;
+        animation-delay: 500ms;
+    }
+
+    p {
+        transform: translateY(80px);
+        animation: phoneFadeUp 800ms ease-out forwards;
+        animation-delay: 1000ms;
+    }
+
+    .button {
+        animation-delay: 1000ms;
+    }
+
+    @keyframes phoneFadeIn {
+        to { opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes phoneFadeUp {
+        to { opacity: 1; transform: translateY(0); }
+    }
+}
+
+
+/*
+// --- ANIMACE --- 
+*/
+@keyframes slideInLeft {
+    to { transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    to { transform: translateX(0); }
+}
+
+@keyframes navbarSlide {
+    to { scale: 1 1; }
+}
+
+@keyframes buttonFadeIn {
+    20% { opacity: 0.1; }
+    70% { opacity: 0.5; }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes textAnimation {
+    to { opacity: 1; transform: translateX(0); }
+}
