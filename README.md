@@ -1,13 +1,13 @@
-# HTML-CSS-web-design
+# HTML-CSS-website
 
-Template jednoduchého webu s animacemi udělán pomocí HTML, CSS a trochu JavaScriptu.
+Jednoducý statický web s animacemi udělán pomocí HTML, CSS a trochu JavaScriptu.
 Projekt byl vytvořen se záměrem procvičení HTML a CSS.
 
 ## Funkce
 
 - Responzivní design.
 - Přizpůsobené animace pro různé velikosti obrazovek pomocí **@media queries**.
-- Moderní CSS vlastnosti => **flexbox**, **keyframes animace** a další.
+- Moderní CSS vlastnosti => **flexbox**, **keyframes animace**, **použití CSS funkcí**, a další.
 
 ## Ukázka
 
@@ -16,7 +16,6 @@ Projekt byl vytvořen se záměrem procvičení HTML a CSS.
 ## Poznámky
 
 - Zkusil jsem importovat defaultní css file, kde jsem připravil navbar a :root, abych nemusel neustále opisovat navbar do každého css souboru.
-- Přemýšlel jsem, že možná do default.css vložím i veškeré animace, což udělá kód opět více kompaktní.
 - JavaScript byl použit pouze u **Login** stránky, protože jsem chtěl ošetřit maximální počet znaků a udělal jsem funkci oka, které zobrazuje heslo.
 
 ## Použití
