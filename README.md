@@ -13,11 +13,11 @@ Projekt byl vytvořen se záměrem procvičení HTML a CSS.
 
 ![image](https://github.com/user-attachments/assets/31370155-2fe5-48db-9cec-c7b7a1d991a6)
 
+## Použití
+
+- Pro vyzkoušení projektu si stáhněte repozitář a spusťte index.html v prohlížeči.
+
 ## Poznámky
 
 - Zkusil jsem importovat defaultní css file, kde jsem připravil navbar a :root, abych nemusel neustále opisovat navbar do každého css souboru.
 - JavaScript byl použit pouze u **Login** stránky, protože jsem chtěl ošetřit maximální počet znaků a udělal jsem funkci oka, které zobrazuje heslo.
-
-## Použití
-
-- Pro vyzkoušení projektu si stáhněte repozitář a spusťte na local serveru.
