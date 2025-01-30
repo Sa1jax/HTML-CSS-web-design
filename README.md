@@ -15,7 +15,9 @@ Projekt byl vytvořen se záměrem procvičení HTML a CSS.
 
 ## Použití
 
-- Pro vyzkoušení projektu si stáhněte repozitář a spusťte index.html v prohlížeči.
+- Pro vyzkoušení projektu si naklonujte repozitář a spusťte index.html v prohlížeči.
+  ```bash
+  git clone https://github.com/uzivatel/HTML-CSS-website.git
 
 ## Poznámky
 
